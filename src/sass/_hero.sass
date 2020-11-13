@@ -1,0 +1,285 @@
+.hero
+  padding-top: 45px
+  padding-bottom: 45px
+  &__title
+    font-size: 36px
+    +Bold
+  &-filter
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+    margin-bottom: 32px
+    &-select
+      display: none
+      font-size: 16px
+      flex-direction: column
+      +Reg
+      &__list
+        height: auto
+        display: flex
+        flex-direction: column
+        background-color: #254595
+        padding-top: 10px
+        padding-bottom: 15px
+        border-bottom-left-radius: 8px
+        border-bottom-right-radius: 8px
+        margin-bottom: 30px
+        opacity: 1
+        transition: .4s
+      &__face
+        display: flex
+        justify-content: space-between
+        align-items: top
+        padding: 14px 0
+        padding-right: 8px 
+      &__item
+        margin-bottom: 6px
+        padding-left: 40px
+        padding-top: 6px
+        padding-bottom: 10px  
+    &__item
+      font-size: 16px
+      margin-right: 34px
+      padding-top: 8px
+      padding-bottom: 8px
+      border-radius: 8px
+      text-align: center
+      transition: .2s
+      +Medium
+  &-slider
+    position: relative
+    &__slide
+      box-shadow: 8px 0px 8px 1px rgba(#000, .2)
+      background-color: #254595
+      display: flex
+      flex-direction: row
+      justify-content: flex-start
+      margin-bottom: 30px
+      border-radius: 9px
+      width: 170px
+      height: 250px
+      overflow: hidden
+      transition: .4s
+      position: relative
+      z-index: 2
+    &__image
+      border-radius: 9px
+    &__text
+      width: 340px
+      font-size: 16px
+      line-height: 140%
+      +Reg
+    &__link
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 128px
+      height: 46px
+      border: 2px solid #fff
+      font-size: 16px
+      color: #fff
+      border-radius: 8px
+      transition: .2s
+      +Bold
+    &__card
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      padding-bottom: 20px
+      padding-top: 25px
+      width: 0
+      transition: .4s
+      order: 2
+    &-face
+      position: relative
+      width: 100%
+      height: 100%
+      font-size: 16px
+      display: flex
+      order: 1
+    &__city
+      position: absolute
+      bottom: 38px
+      left: 12px
+      +Medium
+    &__country
+      position: absolute
+      bottom: 17px
+      left: 12px
+      +Reg
+
+
+.openCard
+  position: absolute !important
+  width: 546px
+  padding-right: 15px
+  margin-right: -336px
+  z-index: 9999
+  div.hero-slider__card
+    width: 340px
+
+.openCard-schema
+  .hero-slider
+    &__card
+      order: 1
+    &-face
+      order: 2 
+
+.openCard-last
+  padding-left: 36px
+  padding-right: 0 !important
+  margin-right: 0 !important
+  margin-left: -376px
+  .hero-slider
+    &__card
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      padding-bottom: 20px
+      padding-top: 25px
+      width: 0
+      transition: .4s
+    &-face
+      position: relative
+      width: 100%
+      height: 100%
+      font-size: 16px
+      display: flex
+
+
+@media (min-width: 1439px)
+  .hero
+    &-filter__item
+      &:hover
+        cursor: pointer
+        background-color: #A5BEFF
+        padding-left: 20px
+        padding-right: 20px
+
+    &-slider
+      &__link
+        &:hover
+          background-color: #0047fe
+          border: 2px solid #0047fe
+      &__slide
+        &:hover
+          position: absolute !important
+          width: 566px
+          padding-right: 26px
+          margin-right: -336px
+          z-index: 9999 
+          .hero-slider__card
+            margin-left: 30px
+            width: 340px     
+  .last-slide
+    &:hover
+      padding-left: 26px
+      padding-right: 0 !important
+      margin-right: 0 !important
+      margin-left: -396px
+    .hero-slider
+      &__card
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        padding-bottom: 20px
+        padding-top: 25px
+        width: 0
+        transition: .4s
+        order: 1
+      &-face
+        position: relative
+        width: 100%
+        height: 100%
+        font-size: 16px
+        display: flex
+        order: 2
+
+@media (max-width: 992px)
+  .hero
+    &-slider
+      &__slide
+        box-shadow: none 
+    &__title
+      font-size: 30px
+    &-filter
+      flex-wrap: wrap
+      &__item
+        &:nth-child(7)
+          padding-left: 20px
+          padding-right: 20px
+  .openCard
+    position: absolute !important
+    width: 526px
+    padding-right: 0px
+    margin-right: 0px
+    z-index: 9999
+    left: 0
+    div.hero-slider__card
+      width: 340px       
+@media (max-width: 768px) 
+  .hero
+    &-slider
+      &__slide
+        margin-bottom: 15px
+    &-filter
+      &__item
+        &:nth-child(6)
+          padding-left: 20px
+          padding-right: 20px
+        &:nth-child(7)
+          padding-left: 0px
+          padding-right: 0px  
+@media (max-width: 567px)
+  .hero
+    &-filter
+      display: none
+      &-select
+        display: flex
+      &__item
+        margin-right: 0px
+        border-radius: 0px
+        transition: .2s
+        +Reg
+        margin-bottom: 6px
+        padding-left: 40px
+        padding-top: 6px
+        padding-bottom: 10px
+        text-align: left 
+        &:nth-child(6)
+          padding-left: 40px
+          padding-right: 0px
+        &:nth-child(7)
+          padding-left: 40px
+          padding-right: 0px   
+    &__title
+      margin: 0
+  .openCard
+    display: flex
+    flex-direction: column
+    .hero-slider
+      &-face
+        height: 240px
+        overflow: hidden
+      &__image
+        width: 100%
+        height: 570px
+        margin-top: -50px
+        border-radius: 0
+      &__card
+        display: flex
+        padding-left: 20px
+        width: 100%
+      &__text
+        width: 275px
+        margin-top: 0         
+@media (max-width: 400px)
+  .hero
+    &-slider
+      &__slide
+        width: 150px
+        height: 230px
+
+          
+

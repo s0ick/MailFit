@@ -1,0 +1,162 @@
+*
+  box-sizing: border-box
+body
+  background-color: #4f73cd
+  color: #fff
+img
+  max-width: 100%
+button
+  outline: none 
+.container
+  width: 1334px
+  margin: auto
+.blur
+  -webkit-filter: blur(10px)
+  -moz-filter: blur(10px)
+  -o-filter: blur(10px)
+  -ms-filter: blur(10px)
+  filter: blur(10px)
+a
+  text-decoration: none
+  cursor: default
+.active__item
+  background-color: #80a0f2 !important
+  padding-left: 20px
+  padding-right: 20px
+.display
+  height: 0px !important
+  overflow: hidden !important
+  padding: 0 !important
+  opacity: 0 !important
+.transformUp
+  transform: rotate(45deg) !important
+.transformDown
+  transform: rotate(-45deg) !important      
+
+.close
+  width: 15px
+  height: 15px
+  display: none
+  position: absolute
+  right: 20px
+  bottom: 200px
+
+.arrow
+  position: relative
+  &__line-1, &__line-2
+    position: absolute
+    display: block
+    width: 3px
+    height: 15px
+    background-color: #fff
+    border-radius: 8px
+    right: 20px
+    transition: .4s
+    transform: rotate(-45deg)
+  &__line-2
+    right: 11px
+    transform: rotate(45deg)
+
+.swiper
+  &-container
+    padding-left: 13px
+    padding-top: 10px
+    padding-bottom: 10px 
+  &-arrows
+    position: absolute
+    top: 48%
+    display: none
+    flex-direction: row
+    justify-content: space-between
+    width: 120%
+    left: -150px
+  &-arrow
+    &-prev, &-next
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 45px
+      height: 45px
+      position: relative
+      outline: none
+      border-radius: 50%
+      transition: .3s
+      &::after
+        content: ''
+        display: block
+        position: absolute
+        background-color: #fff
+        width: 5px
+        height: 18px
+        top: 8px
+        transform: rotate(45deg)
+        border-radius: 8px
+      &::before
+        content: ''
+        display: block
+        position: absolute
+        background-color: #fff
+        width: 5px
+        height: 18px
+        bottom: 8px
+        transform: rotate(-45deg)
+        border-radius: 8px
+    &-next
+      &::after
+        transform: rotate(-45deg)
+      &::before
+        transform: rotate(45deg)           
+
+
+@media (min-width: 1439px)
+  a, .button
+    cursor: pointer
+  .swiper
+    &-arrows
+      display: flex !important
+      &-prev, &-next
+        &:hover
+          background-color: #0047ff
+  .swiper-pagination
+    display: none           
+@media (max-width: 1439px)
+  .container
+    width: 960px 
+@media (max-width: 992px)
+  .container
+    width: 750px
+  .swiper
+    &-container
+      padding: 0
+      padding-bottom: 20px !important
+    &-pagination
+      bottom: 0 !important
+  
+
+@media (max-width: 768px) 
+  .container
+    width: 100%
+    padding-left: 20px
+    padding-right: 20px
+    margin: 0 
+@media (max-width: 567px)
+  .active__item
+    padding: 0
+    background-color: #3259B9 !important
+    position: relative
+    &::after, &::before
+      content: ''
+      position: absolute
+      display: block
+      background-color: #fff
+      width: 1.5px
+      height: 10px
+      border-radius: 8px
+      transform: rotate(50deg)
+      left: 20px
+      bottom: 12px
+    &::before
+      height: 5px
+      transform: rotate(-50deg)
+      bottom: 13px
+      left: 15px     

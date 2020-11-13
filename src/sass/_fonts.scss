@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'Golos Text Regular';
+  src: local('Golos Text Regular'), local('GolosText-Regular'), url('../fonts/Golostextregular.woff2') format('woff2'), url('../fonts/Golostextregular.woff') format('woff'), url('../fonts/Golostextregular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: 'Golos Text DemiBold';
+  src: local('Golos Text DemiBold'), local('GolosText-DemiBold'), url('../fonts/Golostextdemibold.woff2') format('woff2'), url('../fonts/Golostextdemibold.woff') format('woff'), url('../fonts/Golostextdemibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: 'Golos Text Black';
+  src: local('Golos Text Black'), local('GolosText-Black'), url('../fonts/Golostextblack.woff2') format('woff2'), url('../fonts/Golostextblack.woff') format('woff'), url('../fonts/Golostextblack.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: 'Golos Text Medium';
+  src: local('Golos Text Medium'), local('GolosText-Medium'), url('../fonts/Golostextmedium.woff2') format('woff2'), url('../fonts/Golostextmedium.woff') format('woff'), url('../fonts/Golostextmedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: 'Golos Text Bold';
+  src: local('Golos Text Bold'), local('GolosText-Bold'), url('../fonts/Golostextbold.woff2') format('woff2'), url('../fonts/Golostextbold.woff') format('woff'), url('../fonts/Golostextbold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: auto;
+}
+  
+@mixin Reg {
+  font-family: 'Golos Text Regular', sans-serif;
+  font-weight: 400;
+}
+@mixin Medium {
+  font-family: 'Golos Text Medium', sans-serif;
+  font-weight: 500;
+}
+@mixin Bold {
+  font-family: 'Golos Text Bold', sans-serif;
+  font-weight: 700;
+}
+@mixin Black {
+  font-family: 'Golos Text Black', sans-serif;
+  font-weight: 900;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta name="robots" content="all"><link rel="stylesheet" href="css/style.min.css"><link rel="stylesheet" href="css/swiper-bundle.min.css"><title>Тестовое задание</title></head><body><section class="hero"><div class="container"><h1 class="hero__title">Наши направления</h1><div class="hero-filter" id="filter-1"><span class="hero-filter__item active__item">Все страны</span> <span class="hero-filter__item">Италия</span> <span class="hero-filter__item">Германия</span> <span class="hero-filter__item">Греция</span> <span class="hero-filter__item">Турция</span> <span class="hero-filter__item">Испания</span> <span class="hero-filter__item">Португалия</span></div><div class="hero-filter-select" id="filter-2"><div class="hero-filter-select__face"><span class="hero-filter-select__change">Все направления</span> <span class="arrow"><span class="arrow__line-1"></span> <span class="arrow__line-2"></span></span></div><div class="hero-filter-select__list display"><span class="hero-filter__item active__item">Все направления</span> <span class="hero-filter__item">Италия</span> <span class="hero-filter__item">Германия</span> <span class="hero-filter__item">Греция</span> <span class="hero-filter__item">Турция</span> <span class="hero-filter__item">Испания</span> <span class="hero-filter__item">Португалия</span></div></div><!-- Slider main container --><div class="hero-slider"><div class="swiper-container"><!-- Additional required wrapper --><div class="swiper-wrapper"><!-- Slides --></div><!-- If we need pagination --><div class="swiper-pagination"></div></div><div class="swiper-arrows"><div class="swiper-arrow-prev"></div><div class="swiper-arrow-next"></div></div></div></div></section><script src="./js/swiper-bundle.min.js"></script><script>var mySwiper = new Swiper('.swiper-container', {
+      slidesPerView: 6,
+      slidesPerColumn: 2,
+      slidesPerColumnFill: 'row',
+      
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-arrow-next',
+        prevEl: '.swiper-arrow-prev'
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets'
+      },
+
+      breakpoints: {
+        375: { slidesPerView: 2 },
+        576: { slidesPerView: 3 },
+        992: { slidesPerView: 4 },
+        1439: { slidesPerView: 6 }
+      },
+    });</script><script src="./js/main.min.js"></script></body></html>
