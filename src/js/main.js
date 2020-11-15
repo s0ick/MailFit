@@ -37,15 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const clearOpenCard = () => {
+  const clearOpenCard = (i) => {
     const slides = document.querySelectorAll('.hero-slider__slide');
-    slides.forEach(elem => {
-      elem.classList.remove('openCard');
+    slides.forEach((elem, index) => {
+      if(i !== index) elem.classList.remove('openCard');
       elem.classList.remove('openCard-last');
       elem.style.cssText = `
         margin-left: 0px;
         margin-top: 0px;
-        
       `;
     });
   };
@@ -88,8 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     slides.forEach((elem, index) => {
       elem.addEventListener('click', () => {
-        clearOpenCard();
-        elem.classList.toggle('openCard');
+        clearOpenCard(index);
+        elem.classList.toggle('openCard'); 
         findLastSlide(elem, index);
       });
     });
